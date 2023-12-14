@@ -29,8 +29,9 @@ app.get("/magic/:question", (req, res) => {
         `<h2>${question}</h2>
         <h1>${random}</h1>`
     )
-
 } )
+
+
 
 //TURN SERVER ON
 app.listen(3000, () => {console.log("it worked")})
