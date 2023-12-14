@@ -12,8 +12,12 @@ app.get("/greeting/:name", (req, res) => {
     res.send(`<h1>Hello, ${name}.</h1>`)
 })
 
-
-
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+    const total = req.params.total
+    const tipPercentage = req.params.tipPercentage
+    const result = `${total}`*(`${tipPercentage}`/100)
+   res.send(`<h1>${result}</h1>`)
+})
 
 //TURN SERVER ON
 app.listen(3000, () => {console.log("it worked")})
